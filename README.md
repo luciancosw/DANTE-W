@@ -81,10 +81,11 @@ python caching.py
 ```
 
 ### 🚀 Training (Texture optimization)
-The optimization is conducted by iteratively sampling a random batch of cached rays across all images and performing stochastic gradient descent with neural rendering loss and diffusion prior. The training is highly efficient, only taking several minutes.  Use the following script to start training:
+Use the following script to launch training:
 ```bash
 python ray_train.py
 ```
+The optimization is conducted by iteratively sampling a random batch of cached rays across all images and performing stochastic gradient descent with neural rendering loss and diffusion prior. The training is highly efficient, only taking several minutes.
 
 ### 🖥️ Inference
 After optimization, a standard texture map can be readily exported. To do so, first specify `load_checkpoint_dir` as the absolute path of the saved checkpoint, and then run by:
