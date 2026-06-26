@@ -41,7 +41,7 @@ The code was tested on:
 ## ⚡️ Quick start
 
 ### 📷 Data preparation
-Download the sample data of the scene **Pavilion of Prince Teng** from this [HuggingFace link](https://huggingface.co/datasets/luciancosw/Pavilion-of-Prince-Teng/) and organize the downloaded files of the example scene into a folder namely ```Pavilion_of_Prince_Teng```, with the file structure as follows:
+Download the sample data of the example scene **Pavilion of Prince Teng** from this [HuggingFace link](https://huggingface.co/datasets/luciancosw/Pavilion-of-Prince-Teng/) and organize the downloaded files into a folder namely ```Pavilion_of_Prince_Teng```, with the file structure as follows:
 ```
 Pavilion_of_Prince_Teng  
 ├── data_noon     
@@ -69,7 +69,7 @@ All configs are stored in ```configs/parameter.py```. Make sure to properly set 
 
 - `exp_id`: The ID naming for the current run.
 - `_input_data_rootFld`: The root data path containing the downloaded data, e.g., if the absolute path for ```Pavilion_of_Prince_Teng``` is ```/data/guangyu/dataset/Pavilion_of_Prince_Teng```, then `_input_data_rootFld` should be set as ```/data/guangyu/dataset```.
-- `root_file`: The root path to store the training logs, checkpoints, and also the render results.
+- `root_file`: The root path to store the training logs, checkpoints, and the texturing results.
 - `load_checkpoint_dir`: The absolute path to load the specified ckpt for inference or further training. Set as `None` when training from scratch.
 - `input_mesh_resol`: Set as `1_tex` if the mesh with 9M faces is used, and set as `6` if the mesh with 0.5M faces is used.
 
@@ -81,20 +81,21 @@ python caching.py
 ```
 
 ### 🚀 Training (Texture optimization)
-The optimization is conducted by iteratively sampling a random batch of cached rays across all images and performing stochastic gradient descent with neural rendering loss and diffusion prior. Use the following script to start training:
+The optimization is conducted by iteratively sampling a random batch of cached rays across all images and performing stochastic gradient descent with neural rendering loss and diffusion prior. The training is highly efficient, only taking several minutes.  Use the following script to start training:
 ```bash
 python ray_train.py
 ```
-The training is highly efficient, only taking several minutes. 
-
-- `load_checkpoint_dir`: The absolute path to load the specified ckpt for inference or further training. Set as `None` when training from scratch.
 
 ### 🖥️ Inference
 After optimization, a standard texture map can be readily exported. To do so, first specify `load_checkpoint_dir` as the absolute path of the saved checkpoint, and then run by:
 ```bash
 python texturing.py
 ```
-This will generate a texture map in the format of `.jpg` in `root_file/point_exp/Pavilion_of_Prince_Teng/data_noon/texture_map`.
+This will generate a texture map in the format of `.jpg` in root_file/point_exp/Pavilion_of_Prince_Teng/data_noon/texture_map. 
+
+To visualize the resulting texture, one can use Blender to import the mesh as an *object* first, then open *Shader Editor* and select this *object* and import the diffuse albedo map from the disk for *Base Color*. The texture can be displayed using the *Viewport Shading* mode.
+
+An alternative is to modify the associated `.mtl` file by writing the name of the resulting `.jpg` after *map_ao*, and use simpler tools for visualization.
 
 ## 🔥 Detailed usage on custom scenes
 
