@@ -115,7 +115,7 @@ Estimate per-image camera parameters and reconstruct the dense geometry (in the 
 
 - **Using COLMAP:** Please refer to the official documentation for [command-line interface](https://colmap.github.io/cli.html#) or [GUI](https://colmap.github.io/tutorial.html).
 
-After photogrammetry, export the undistorted images, camera parameters, and the reconstructed mesh model ```YourMeshName.obj```.
+After photogrammetry, export the undistorted images, camera parameters, and the reconstructed mesh model.
 
 ### 🔮 Diffusion inference
 We recommond using [DiffusionRenderer](https://github.com/nv-tlabs/cosmos-transfer1-diffusion-renderer) to generate diffuse albedo maps for the undistorted images in a *per-image* manner, since we find the video mode of DiffusionRenderer is not always stable and our neural texturing by design ensures 3D-consistency. Please follow their official instructions to generate the albedo map for each image.
