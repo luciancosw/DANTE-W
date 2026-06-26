@@ -94,9 +94,9 @@ python texturing.py
 ```
 This will generate a texture map in the format of `.jpg` in root_file/point_exp/Pavilion_of_Prince_Teng/data_noon/texture_map. 
 
-To visualize the resulting texture, one can use Blender to import the mesh as an *object* first, then open *Shader Editor* and select this *object* and import the diffuse albedo map from the disk for *Base Color*. The texture can be displayed using the *Viewport Shading* mode.
+To visualize the resulting texture, one can use [Blender](https://www.blender.org/) to import the mesh as an *object* first, then open *Shader Editor* and select this *object* and import the diffuse albedo map from the disk for *Base Color*. The texture can be displayed using the *Viewport Shading* mode.
 
-An alternative is to modify the associated `.mtl` file by writing the name of the resulting `.jpg` after `map_ao`, and use simpler tools for visualization.
+An alternative is to modify the associated `.mtl` file by writing the name of the resulting `.jpg` after `map_ao`, and use simpler tools like [MeshLab](https://www.meshlab.net/) for visualization.
 
 ## 🔥 Detailed usage on custom scenes
 
