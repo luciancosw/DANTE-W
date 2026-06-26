@@ -140,7 +140,7 @@ SCENE_NAME (e.g., Pavilion_of_Prince_Teng)
     └── YourMeshName.obj             
 ```
 
-The camera convention used in our codestrictly follows [MVSNet](https://github.com/YoYo000/MVSNet/tree/master), where the camera parameters are defined in the ```.txt``` file, with the extrinsic `E = [R|t]` and intrinsic `K` being expressed as:
+The camera convention used in our code strictly follows [MVSNet](https://github.com/YoYo000/MVSNet/tree/master), where the camera parameters are defined in the ```.txt``` file, with the extrinsic `E = [R|t]` and intrinsic `K` being expressed as:
 
 ```
 extrinsic
