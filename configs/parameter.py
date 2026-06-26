@@ -88,8 +88,8 @@ class Params(object):
         pass
     
     def load_params(self):
-        self.modelName = "TengWangGe"
-        self.splitName = "data_main_all_lit"
+        self.modelName = "Pavilion_of_Prince_Teng"
+        self.splitName = "data_noon"
         self.dsp_factor = 4
         input_mesh_resol = '1_tex'    # 1
         self.datasetFolder = os.path.join(self._input_data_rootFld, 'aLit')
@@ -101,9 +101,9 @@ class Params(object):
         self.attribute_cache_path = os.path.join(self.root_file, 'experiment/caches', self.modelName, self.splitName+'{}'.format(self.dsp_factor), 'ss_{}'.format(self.ss_ratio))
         
         # -----------------------------------------------------------------------------------------------------------
-        # # data_main_all_lit
+        # # data_noon
         self.num_lit = 1
-        self.all_view_list = list(range(301))
+        self.all_view_list = list(range(204))
         self.hold_out_list = []
         self.test_view_list = []
         # self.test_view_list = self.all_view_list
