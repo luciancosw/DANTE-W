@@ -3,7 +3,7 @@
 This repository is the official implementation of the ECCV'26 paper titled "DANTE-W: Diffuse Albedo Neural Texturing in the Wild".
 
 [![Website](assets/logo/badge-website.svg)](https://dante-wild.github.io/)
-[![Paper](https://img.shields.io/badge/arXiv-PDF-b31b1b)](https://arxiv.org/abs/2403.19517)
+[![Paper](https://img.shields.io/badge/arXiv-PDF-b31b1b)](https://arxiv.org/abs/2606.30677)
 [![Data](assets/logo/badge-data.svg)](https://huggingface.co/datasets/luciancosw/Pavilion-of-Prince-Teng/)
 
 Guangyu Wang,
@@ -190,11 +190,12 @@ Follow 1) [⬇ Ray caching](#-ray-caching), 2) [🚀 Training (Texture optimizat
 If you find our code or data helpful, please cite our paper:
 
 ```bibtex
-@InProceedings{Wang_2024_CVPR,
-    author    = {Wang, Guangyu and Zhang, Jinzhi and Wang, Fan and Huang, Ruqi and Fang, Lu},
-    title     = {XScale-NVS: Cross-Scale Novel View Synthesis with Hash Featurized Manifold},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    month     = {June},
-    year      = {2024},
-    pages     = {21029-21039}
+@misc{wang2026dantewdiffusealbedoneural,
+      title={DANTE-W: Diffuse Albedo Neural Texturing in the Wild}, 
+      author={Guangyu Wang and Tianheng Lu and Ruqi Huang and Lu Fang},
+      year={2026},
+      eprint={2606.30677},
+      archivePrefix={arXiv},
+      primaryClass={cs.GR},
+      url={https://arxiv.org/abs/2606.30677}, 
 }
